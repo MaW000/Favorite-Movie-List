@@ -2,10 +2,10 @@
   "name": "movies",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "backend": "nodemon server.js",
+    "start": "node index.js",
+    "backend": "nodemon index.js",
     "frontend": "cd client npm run start",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
     "install-client": " cd client && npm install",
@@ -16,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "mongoose": "^6.3.3",
     "morgan": "^1.10.0"
