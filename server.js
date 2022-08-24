@@ -13,7 +13,7 @@ app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, "./client/build", "index.html"))
 })
 
-mongoose.connect('mongodb+srv://matt:nEd5juQLYp2DEo2t@cluster0.zfgnmzv.mongodb.net/?retryWrites=true&w=majority',{useNewUrlParser: true})
+mongoose.connect(process.env.MONGO_URI,{useNewUrlParser: true})
 .then(() => console.log("Connected to MongoDB"))
 .catch(err => console.error(err));
 
